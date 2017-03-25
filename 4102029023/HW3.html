@@ -2,14 +2,57 @@
 <html>
 <head>
 <style>
+
+html{   
+background: -webkit-linear-gradient(top,#88c7f0,#7d7cc4) no-repeat;
+  background-size: cover;
+  height:140%;
+}
+
+.div1 {
+	background-color:rgba(72,72,72,0.4);
+	padding-left:45px;
+	padding-right:0px;
+	padding-top:25px;
+	padding-bottom:30px;
+	width: 450px;
+	float: left;
+	left: 50%;
+	position: absolute;
+   margin-top:20px;
+	margin-left: -260px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  font-family:微軟正黑體;
+
+}
+
+
+input{border: 2px solid #fed264; padding:7px;font-size:15px;}
+textarea{border: 3px solid #fed264;font-size:15px;}
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 2px solid #fed264;
+	color: #fed264;
+	outline: none;
+  padding: 10px 10px 10px 10px;
+}
+.focused{
+	color:#30aed6;
+	border:#30aed6 solid 3px;
+}
+	
 table,td 
 {
  padding:5px;
- border: 3px solid #ccc;
+ border: 2px solid #fed264;
  width:value;
  word-break:break-all;
  border-collapse:collapse;
+ font-color:#ccc;
 }
+
 </style>
 <meta charset=" utf-8">
 <script type="text/javascript">
@@ -77,28 +120,30 @@ function show(){
 </script>
 </head>
 <body>
+<div class="div1">
 <div id="parent">
 
+<H2>RESUME</H2>
    姓名:
-   <input type="input" name="名字" class="input" placeholder="姓名" /><br><br>
+   <input type="input" name="名字" class="feedback-input" placeholder="姓名" /><br><br>
    生日:
-   <input type="date"  name="生日" class="text" /><br><br>
+   <input type="date"  name="生日" class="feedback-input" /><br><br>
    興趣：
-   <input type="radio" id="1" name="興趣" value="吃飯">吃飯
-   <input type="radio" id="2" name="興趣" value="睡覺">睡覺
-   <input type="radio" id="3" name="興趣" value="打東東">打東東<br><br>
+   <input type="radio" id="1" name="興趣" value="吃飯" class="feedback-input">吃飯
+   <input type="radio" id="2" name="興趣" value="睡覺" class="feedback-input">睡覺
+   <input type="radio" id="3" name="興趣" value="打東東" class="feedback-input">打東東<br><br>
    性別：
-   <input type="radio" id="4" name="性別" value="男">男
-   <input type="radio" id="5" name="性別" value="女">女<br><br>
+   <input type="radio" id="4" name="性別" value="男" class="feedback-input">男
+   <input type="radio" id="5" name="性別" value="女" class="feedback-input">女<br><br>
+   自傳：<br><br>
+   <textarea type="text" name="res" id="three" class="feedback-input" placeholder="請輸入簡單自傳" style="height:150px;width:243px"></textarea><br><br>
 	
-   <textarea class="text" type="text" name="res" id="three" placeholder="請輸入簡單自傳" style="height:150px"></textarea><br><br>
-	
-   <input type="button" value="顯示" id="show" onclick="show();this.disabled=true" />
-   <input type="button" value="重設" onclick="location.reload()"><br><br>
+   <input type="button" value="顯示" id="show" onclick="show();this.disabled=true"  style="width:120px;height:40px;border:2px #fed264 solid; background-color:#697399" />&nbsp;&nbsp;&nbsp;
+   <input type="button" value="重設" onclick="location.reload()" style="width:120px;height:40px;border:2px #fed264 solid; background-color:#697399"  "><br><br>
      
 </div>
 <div id= "Child">
-
+</div>
 </div>
 </body>
 </html>
